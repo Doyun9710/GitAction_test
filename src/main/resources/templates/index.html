@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="우리팀">
+        <meta name="description" content="팀포트폴리오">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/021ba766ac.js" crossorigin="anonymous"></script>
+        <!-- 메인 자바스크립트 -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/login_style.js"></script>
+        <script src="./js/swiperjs.js"></script>
+        <!-- 메인 스타이 css -->
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/swiper.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <title>메인페이지</title>
+    </head>
+    <body>
+        <div id="web">
+            <header>
+                <h1 class="logo"><a href="/"><img src="../img/logo.png" alt="logo"></a></h1>
+                <div id="login">
+                    <!-- <p class="log"><a href="login"><i class="fa-solid fa-right-to-bracket" alt="로그인"title="로그인"></i></a></p> -->
+                    <p class="log"><a href="login">로그인</a></p>
+                    <div class="logto">
+                        <p class="login_info">
+                            <div th:if="${nickname}">
+                                <p th:text="${nickname}"></p>
+                            </div> &nbsp;&nbsp;
+                            <i class="fa-solid fa-caret-down"></i></p>
+                        <ul class="login_info_list">
+                            <li><a href="#">회원정보관리</a></li>
+                            <li><a href="mypage/doyun">프로필</a></li>
+                            <li><a href="board/shop">아이템 샵</a></li>
+                            <li class="logout"><a href="/logout">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <ul class="row">
+                    <li><a href="../board/notice">공지사항</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="../board/fight">대전</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="board/team">협동</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="../board/list">게시판</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="../rank">랭킹</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <section>
+                <div class="row content">
+                    <div class="main">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row user">
+                                        <div class="user_profile">
+                                            <a href="/mypage/doyun">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="../img/doyun_icon.png" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 100</p>
+                                                        <p class="nik">doyun</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                    <!-- <div class="user_bagdge">
+                                                    </div> -->
+                                                </div>
+                                                <div class="user_content">
+                                                    <p>
+                                                        안녕하세요.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <a href="#">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 70</p>
+                                                        <p class="nik">때릴거야?</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                </div>
+                                                <div class="user_content">
+                                                    <p></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 20</p>
+                                                    <p class="nik">이론마스터</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 49</p>
+                                                    <p class="nik">전투는실전</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row user">
+                                        <div class="user_profile">
+                                            <a href="/mypage/doyun">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="../img/doyun_icon.png" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 100</p>
+                                                        <p class="nik">doyun</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                    <!-- <div class="user_bagdge">
+                                                    </div> -->
+                                                </div>
+                                                <div class="user_content">
+                                                    <p>
+                                                        안녕하세요.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <a href="#">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 70</p>
+                                                        <p class="nik">철권고수</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                </div>
+                                                <div class="user_content">
+                                                    <p></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 100</p>
+                                                    <p class="nik">이론첼린저</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 60</p>
+                                                    <p class="nik">스나이퍼</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row user">
+                                        <div class="user_profile">
+                                            <a href="/mypage/doyun">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="../img/doyun_icon.png" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 100</p>
+                                                        <p class="nik">doyun</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                    <!-- <div class="user_bagdge">
+                                                    </div> -->
+                                                </div>
+                                                <div class="user_content">
+                                                    <p>
+                                                        안녕하세요.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <a href="#">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 70</p>
+                                                        <p class="nik">배린이</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                </div>
+                                                <div class="user_content">
+                                                    <p></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 120</p>
+                                                    <p class="nik">헤드헌터</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 49</p>
+                                                    <p class="nik">데바데석유</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row user">
+                                        <div class="user_profile">
+                                            <a href="/mypage/doyun">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="../img/doyun_icon.png" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 100</p>
+                                                        <p class="nik">doyun</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                    <!-- <div class="user_bagdge">
+                                                    </div> -->
+                                                </div>
+                                                <div class="user_content">
+                                                    <p>
+                                                        안녕하세요.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <a href="#">
+                                                <div class="profile">
+                                                    <p class="icon"><img src="" alt="#"></p>
+                                                    <div class="user_info">
+                                                        <p class="level">Lv : 70</p>
+                                                        <p class="nik">홀리</p>
+                                                        <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                    </div>
+                                                </div>
+                                                <div class="user_content">
+                                                    <p></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 100</p>
+                                                    <p class="nik">바론강타</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="user_profile">
+                                            <div class="profile">
+                                                <p class="icon"><img src="" alt="#"></p>
+                                                <div class="user_info">
+                                                    <p class="level">Lv : 49</p>
+                                                    <p class="nik">용스틸장인</p>
+                                                    <img class="bagdge" src="../img/starbucks.png" alt="스벅">
+                                                </div>
+                                            </div>
+                                            <div class="user_content">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="autoplay-progress">
+                                <svg viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="20"></circle>
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="battle">
+                            <div class="Proceeding">
+                                <div class="user1">
+                                    
+                                </div>
+                                <div class="user1">
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>
