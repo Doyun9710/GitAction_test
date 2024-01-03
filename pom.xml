@@ -9,6 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>platform.game</groupId>
+	<!-- <artifactId>service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>service</name> -->
 	<artifactId>springboot</artifactId>
 	<version>example</version>
 	<name>springboot-example</name>
